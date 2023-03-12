@@ -1,14 +1,19 @@
 {
-    "name": "Python",
+    "name": "Odoo",
     "type": "python",
     "request": "launch",
     "stopOnEntry": false,
     "pythonPath": "${config.python.pythonPath}",
-    //"program": "${file}", use this to debug opened file.
     "program": "${workspaceRoot}/src/odoo/odoo-bin",
     "args": [
       "-c",
-      "${workspaceRoot}/conf/odoo.conf"
+      "${workspaceRoot}/conf/odoo.conf",
+      "-d",
+      "database-name",
+      "-u",
+      "module-to-update",
+      "--dev",
+      "all"
     ],
     "cwd": "${workspaceRoot}",
     "console": "externalTerminal",
