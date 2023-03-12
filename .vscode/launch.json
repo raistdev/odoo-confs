@@ -1,0 +1,20 @@
+{
+    "name": "Python",
+    "type": "python",
+    "request": "launch",
+    "stopOnEntry": false,
+    "pythonPath": "${config.python.pythonPath}",
+    //"program": "${file}", use this to debug opened file.
+    "program": "${workspaceRoot}/src/odoo/odoo-bin",
+    "args": [
+      "-c",
+      "${workspaceRoot}/conf/odoo.conf"
+    ],
+    "cwd": "${workspaceRoot}",
+    "console": "externalTerminal",
+    "debugOptions": [
+        "WaitOnAbnormalExit",
+        "WaitOnNormalExit",
+        "RedirectOutput"
+    ]
+}
